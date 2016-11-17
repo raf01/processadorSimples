@@ -1,0 +1,3 @@
+module MUX(.in(SW[7:0]), .seletor(SW[9:8]), .out0(registradorA), .out1(registradorB), .out2(opcode), .out3(buffer), .clock(~KEY[0]));
+
+endmodule

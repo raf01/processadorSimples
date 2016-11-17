@@ -1,0 +1,1 @@
+module ULA ula(regA, regB, opcode, clock);
