@@ -1,11 +1,12 @@
-module MUX(in, seletor, out0, out1, out2, out3, CLOCK);
+module MUX(in, seletor, out0, out1, out2, out3, clock);
 
 input [7:0]in;
 input [1:0]seletor;
-input CLOCK;
-output reg [7:0]out0, out1, out2,out3;
+input clock;
+output reg [7:0]out0, out1, out3;
+output reg [3:0]out2;
 
-always@(posedge CLOCK)
+always@(posedge clock)
 begin
 	case(seletor)
 		0:

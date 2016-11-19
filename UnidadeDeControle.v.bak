@@ -1,0 +1,82 @@
+module UnidadeDeControle(opcode,rd,we);
+
+input opcode;
+output reg rd,we;
+
+always @(opcode)
+begin
+rd = 1'b0;
+we = 1'b0;
+
+	case(opcode)
+		4'b0000:		//saida 0
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			end
+		4'b0001:		//soma
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+
+			end
+		4'b0010:		//subtrai
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			end
+		4'b0011:		//multiplicaçao
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			end
+		4'b0100:		//divisao
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			end
+		4'b0101:		//and
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			end
+		4'b0110:		//or
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			end
+		4'b0111:		//not
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			end
+		4'b1000:		//xor
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			end
+		4'b1001:		//xnor
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			end
+		4'b1010:
+			begin
+				rd = 1'b0;
+				we = 1'b1 
+			end
+		4'b1011:
+			begin
+				rd = 1'b0;
+				we = 1'b1;
+			end
+		default:
+			begin
+				rd = 1'b0;
+				we = 1'b0;
+			
+			end
+	endcase
+end 
+
+endmodule 
