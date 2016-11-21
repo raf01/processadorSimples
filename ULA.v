@@ -1,14 +1,13 @@
-module ULA (regA, regB, opcode, endereco, clock, saidaULA,enable);
+module ULA (regA, regB, opcode, operando, clock, saidaULA,enable);
 
-input enable;
-input [7:0]regA,regB;
-input [3:0]opcode, endereco;
-input clock;
-output reg saidaULA;
+input enable, clock;
+input [7:0] regA, regB;
+input [3:0]opcode, operando;
+output reg [7:0] saidaULA;
 
-always@(clock)
+always@(posedge clock)
 	begin
-		if (enable == 1)
+		if (enable)
 		begin
 			case (opcode)
 				4'b0000:
@@ -35,10 +34,11 @@ always@(clock)
 					saidaULA = regA; // Armazena o conteudo de a na saida da ULA
 				4'b1011:
 					saidaULA = regB;
-			//	4'b1100:
-			//		memoria[endereco] = a;
+				//4'b1100:
+					//ULA nao realiza nada. Unidade de Controle captura registrador de saida da ULA e salva na memoria RAM.
+				//4'b1101:
+					//ULA nao realiza nada. Unidade de Controle salva conteudo do endereco de memoria para o registrador A.
 					
-			
 			endcase
 		end
 	end

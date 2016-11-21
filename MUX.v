@@ -1,23 +1,46 @@
-module MUX(in, seletor, out0, out1, out2, out3, clock);
+module MUX(in, seletor, out0, out1, out2, out3, clock, enable, ledOutput, choiceOut, tempRegA, flagUC);
+//module MUX(in, seletor, out0, out1, out2, out3, clock, enable);
 
-input [7:0]in;
+input [7:0]in, tempRegA;
 input [1:0]seletor;
-input clock;
-output reg [7:0]out0, out1, out3;
-output reg [3:0]out2;
+input clock, enable, flagUC;
+output reg [7:0]out0, out1, out2;
+input [7:0] out3;
+output reg [7:0] choiceOut, ledOutput;
 
-always@(posedge clock)
+always@(posedge clock or posedge flagUC)
 begin
+	
+	if(enable)
+	begin
+		case(seletor)
+			0:
+				out0 = in;	//registrador A
+			1:
+				out1 = in;	//registrador B
+			2:
+				out2 = in;	//opcode
+		endcase
+	end
+	
 	case(seletor)
 		0:
-			out0 = in;	//registrador A
+			choiceOut = out0;	//registrador A
 		1:
-			out1 = in;	//registrador B
+			choiceOut = out1;	//registrador B
 		2:
-			out2 = in;	//opcode
+			choiceOut = out2;	//opcode
 		3:
-			out3 = in;	//buffer
+			choiceOut = out3;	//buffer
 	endcase
+	
+	if(flagUC)
+	begin
+		out0 = tempRegA;
+	end
+	
+	ledOutput = in;
+	
 end
 
 endmodule
