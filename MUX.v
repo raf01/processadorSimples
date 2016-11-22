@@ -8,9 +8,14 @@ output reg [7:0]out0, out1, out2;
 input [7:0] out3;
 output reg [7:0] choiceOut, ledOutput;
 
-always@(posedge clock or posedge flagUC)
-begin
-	
+always@(posedge clock or posedge flagUC)	//https://www.altera.com/support/support-resources/knowledge-base/solutions/rd06242003_6128.html
+begin													//Explicaçao do erro que estava ocorrendo
+	if(flagUC)
+	begin
+		out0 = tempRegA;
+	end
+	else
+	begin
 	if(enable)
 	begin
 		case(seletor)
@@ -33,12 +38,7 @@ begin
 		3:
 			choiceOut = out3;	//buffer
 	endcase
-	
-	if(flagUC)
-	begin
-		out0 = tempRegA;
 	end
-	
 	ledOutput = in;
 	
 end

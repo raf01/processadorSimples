@@ -37,6 +37,7 @@ always@(posedge clock)
 				//4'b1100:
 					//ULA nao realiza nada. Unidade de Controle captura registrador de saida da ULA e salva na memoria RAM.
 				//4'b1101:
+	
 					//ULA nao realiza nada. Unidade de Controle salva conteudo do endereco de memoria para o registrador A.
 					
 			endcase

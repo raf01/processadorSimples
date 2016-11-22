@@ -40,7 +40,7 @@ begin
 				clockRAM = ~clockRAM;
 				tempRegA = dataOutMem;
 				flagUC = 1;
-				for( i = 0; i <= 10000000; i = i + 1) 
+				for( i = 0; i <= 4998; i = i + 1) 	//quartus suporta somente 5000 interaçoes
 					flagUC = flagUC;
 				flagUC = 0;
 			end
@@ -50,4 +50,4 @@ end
 //assign opcode[3:0] = instructionByte[7:4];
 //assign operando[3:0] = instructionByte[3:0];
 
-endmodule 
+endmodule
