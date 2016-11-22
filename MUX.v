@@ -1,21 +1,16 @@
-module MUX(in, seletor, out0, out1, out2, out3, clock, enable, ledOutput, choiceOut, tempRegA, flagUC);
+module MUX(in, seletor, out0, out1, out2, out3, clock, enable, ledOutput, choiceOut);
 //module MUX(in, seletor, out0, out1, out2, out3, clock, enable);
 
-input [7:0]in, tempRegA;
+input [7:0]in;
 input [1:0]seletor;
-input clock, enable, flagUC;
+input clock, enable;
 output reg [7:0]out0, out1, out2;
 input [7:0] out3;
 output reg [7:0] choiceOut, ledOutput;
 
-always@(posedge clock or posedge flagUC)	//https://www.altera.com/support/support-resources/knowledge-base/solutions/rd06242003_6128.html
+always@(posedge clock)	//https://www.altera.com/support/support-resources/knowledge-base/solutions/rd06242003_6128.html
 begin													//Explicaçao do erro que estava ocorrendo
-	if(flagUC)
-	begin
-		out0 = tempRegA;
-	end
-	else
-	begin
+
 	if(enable)
 	begin
 		case(seletor)
@@ -24,7 +19,7 @@ begin													//Explicaçao do erro que estava ocorrendo
 			1:
 				out1 = in;	//registrador B
 			2:
-				out2 = in;	//opcode
+				out2 = in;	//instructionByte
 		endcase
 	end
 	
@@ -38,7 +33,7 @@ begin													//Explicaçao do erro que estava ocorrendo
 		3:
 			choiceOut = out3;	//buffer
 	endcase
-	end
+	
 	ledOutput = in;
 	
 end

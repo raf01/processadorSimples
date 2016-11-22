@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorSimples
-Mon Nov 21 20:44:31 2016
+Tue Nov 22 18:04:23 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -11,6 +11,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web E
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,7 +37,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Nov 21 20:44:31 2016                  ;
+; Analysis & Synthesis Status        ; Failed - Tue Nov 22 18:04:23 2016                  ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; processadorSimples                                 ;
 ; Top-level Entity Name              ; processadorSimples                                 ;
@@ -155,7 +156,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
-    Info: Processing started: Mon Nov 21 20:44:30 2016
+    Info: Processing started: Tue Nov 22 18:04:23 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorSimples -c processadorSimples
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file UnidadeDeControle.v
@@ -170,48 +171,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file MUX.v
 Info (12021): Found 1 design units, including 1 entities, in source file TOP_DE1.v
     Info (12023): Found entity 1: DE1_TOP
 Warning (12019): Can't analyze file -- file DE1_TOP.v is missing
-Info (12127): Elaborating entity "processadorSimples" for the top level hierarchy
-Warning (10034): Output port "LEDG[9..8]" at processadorSimples.v(7) has no driver
-Warning (10034): Output port "HEX0" at processadorSimples.v(5) has no driver
-Warning (10034): Output port "HEX1" at processadorSimples.v(5) has no driver
-Warning (10034): Output port "HEX2" at processadorSimples.v(5) has no driver
-Warning (10034): Output port "HEX3" at processadorSimples.v(5) has no driver
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula"
-Info (12128): Elaborating entity "MUX" for hierarchy "MUX:mux"
-Error (10200): Verilog HDL Conditional Statement error at MUX.v(14): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: /home/layhana/processadorSimples/MUX.v Line: 14
-Warning (10270): Verilog HDL Case Statement warning at MUX.v(16): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at MUX.v(11): inferring latch(es) for variable "out2", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at MUX.v(11): inferring latch(es) for variable "out1", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at MUX.v(11): inferring latch(es) for variable "out0", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "out0[0]" at MUX.v(37)
-Info (10041): Inferred latch for "out0[1]" at MUX.v(37)
-Info (10041): Inferred latch for "out0[2]" at MUX.v(37)
-Info (10041): Inferred latch for "out0[3]" at MUX.v(37)
-Info (10041): Inferred latch for "out0[4]" at MUX.v(37)
-Info (10041): Inferred latch for "out0[5]" at MUX.v(37)
-Info (10041): Inferred latch for "out0[6]" at MUX.v(37)
-Info (10041): Inferred latch for "out0[7]" at MUX.v(37)
-Info (10041): Inferred latch for "out1[0]" at MUX.v(14)
-Info (10041): Inferred latch for "out1[1]" at MUX.v(14)
-Info (10041): Inferred latch for "out1[2]" at MUX.v(14)
-Info (10041): Inferred latch for "out1[3]" at MUX.v(14)
-Info (10041): Inferred latch for "out1[4]" at MUX.v(14)
-Info (10041): Inferred latch for "out1[5]" at MUX.v(14)
-Info (10041): Inferred latch for "out1[6]" at MUX.v(14)
-Info (10041): Inferred latch for "out1[7]" at MUX.v(14)
-Info (10041): Inferred latch for "out2[0]" at MUX.v(14)
-Info (10041): Inferred latch for "out2[1]" at MUX.v(14)
-Info (10041): Inferred latch for "out2[2]" at MUX.v(14)
-Info (10041): Inferred latch for "out2[3]" at MUX.v(14)
-Info (10041): Inferred latch for "out2[4]" at MUX.v(14)
-Info (10041): Inferred latch for "out2[5]" at MUX.v(14)
-Info (10041): Inferred latch for "out2[6]" at MUX.v(14)
-Info (10041): Inferred latch for "out2[7]" at MUX.v(14)
-Error (12152): Can't elaborate user hierarchy "MUX:mux" File: /home/layhana/processadorSimples/processadorSimples.v Line: 24
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 12 warnings
-    Error: Peak virtual memory: 638 megabytes
-    Error: Processing ended: Mon Nov 21 20:44:31 2016
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Warning (10236): Verilog HDL Implicit Net warning at processadorSimples.v(25): created implicit net for "ledOutput"
+Error (10206): Verilog HDL Module Declaration error at UnidadeDeControle.v(20): top module port "dataOut" is not found in the port list File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 20
+Error (10161): Verilog HDL error at UnidadeDeControle.v(25): object "debugger" is not declared File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 25
+Error (10161): Verilog HDL error at UnidadeDeControle.v(46): object "debugger" is not declared File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 46
+Error (10161): Verilog HDL error at UnidadeDeControle.v(64): object "ledsDebugger" is not declared File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 64
+Error (10161): Verilog HDL error at UnidadeDeControle.v(64): object "debugger" is not declared File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 64
+Info (144001): Generated suppressed messages file /home/layhana/Documents/processadorSimples/output_files/processadorSimples.map.smsg
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 5 errors, 4 warnings
+    Error: Peak virtual memory: 652 megabytes
+    Error: Processing ended: Tue Nov 22 18:04:23 2016
+    Error: Elapsed time: 00:00:00
+    Error: Total CPU time (on all processors): 00:00:00
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/layhana/Documents/processadorSimples/output_files/processadorSimples.map.smsg.
 
 
