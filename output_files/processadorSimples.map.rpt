@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorSimples
-Fri Nov 25 12:05:39 2016
+Fri Nov 25 17:29:26 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -19,10 +19,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web E
  11. Parameter Settings for Inferred Entity Instance: ULA:ula|lpm_divide:Div0
  12. Parameter Settings for Inferred Entity Instance: ULA:ula|lpm_mult:Mult0
  13. lpm_mult Parameter Settings by Entity Instance
- 14. Port Connectivity Checks: "MUX:mux"
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+ 14. Port Connectivity Checks: "ram:RAM"
+ 15. Port Connectivity Checks: "MUX:mux"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,15 +49,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 25 12:05:39 2016              ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 25 17:29:26 2016              ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; processadorSimples                                 ;
 ; Top-level Entity Name              ; processadorSimples                                 ;
 ; Family                             ; Cyclone II                                         ;
-; Total logic elements               ; 453                                                ;
-;     Total combinational functions  ; 339                                                ;
-;     Dedicated logic registers      ; 196                                                ;
-; Total registers                    ; 196                                                ;
+; Total logic elements               ; 469                                                ;
+;     Total combinational functions  ; 349                                                ;
+;     Dedicated logic registers      ; 203                                                ;
+; Total registers                    ; 203                                                ;
 ; Total pins                         ; 67                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
@@ -166,26 +167,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; UnidadeDeControle.v              ; yes             ; User Verilog HDL File        ; /home/layhana/processadorSimples/UnidadeDeControle.v                   ;         ;
-; processadorSimples.v             ; yes             ; User Verilog HDL File        ; /home/layhana/processadorSimples/processadorSimples.v                  ;         ;
-; ULA.v                            ; yes             ; User Verilog HDL File        ; /home/layhana/processadorSimples/ULA.v                                 ;         ;
-; MUX.v                            ; yes             ; User Verilog HDL File        ; /home/layhana/processadorSimples/MUX.v                                 ;         ;
-; ram.v                            ; yes             ; Auto-Found Verilog HDL File  ; /home/layhana/processadorSimples/ram.v                                 ;         ;
+; UnidadeDeControle.v              ; yes             ; User Verilog HDL File        ; /home/fernandak/fernanda/processadorSimples/UnidadeDeControle.v        ;         ;
+; processadorSimples.v             ; yes             ; User Verilog HDL File        ; /home/fernandak/fernanda/processadorSimples/processadorSimples.v       ;         ;
+; ULA.v                            ; yes             ; User Verilog HDL File        ; /home/fernandak/fernanda/processadorSimples/ULA.v                      ;         ;
+; MUX.v                            ; yes             ; User Verilog HDL File        ; /home/fernandak/fernanda/processadorSimples/MUX.v                      ;         ;
+; ram.v                            ; yes             ; Auto-Found Verilog HDL File  ; /home/fernandak/fernanda/processadorSimples/ram.v                      ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal130.inc                   ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/aglobal130.inc      ;         ;
-; db/lpm_divide_5dm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/layhana/processadorSimples/db/lpm_divide_5dm.tdf                 ;         ;
-; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/layhana/processadorSimples/db/sign_div_unsign_fkh.tdf            ;         ;
-; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/layhana/processadorSimples/db/alt_u_div_00f.tdf                  ;         ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/layhana/processadorSimples/db/add_sub_lkc.tdf                    ;         ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/layhana/processadorSimples/db/add_sub_mkc.tdf                    ;         ;
+; db/lpm_divide_5dm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/lpm_divide_5dm.tdf      ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/sign_div_unsign_fkh.tdf ;         ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/alt_u_div_00f.tdf       ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/add_sub_lkc.tdf         ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/add_sub_mkc.tdf         ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/multcore.inc        ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/altshift.inc        ;         ;
-; db/mult_o5t.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/layhana/processadorSimples/db/mult_o5t.tdf                       ;         ;
+; db/mult_o5t.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/mult_o5t.tdf            ;         ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
 
 
@@ -194,28 +195,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 453    ;
+; Estimated Total logic elements              ; 469    ;
 ;                                             ;        ;
-; Total combinational functions               ; 339    ;
+; Total combinational functions               ; 349    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 197    ;
-;     -- 3 input functions                    ; 108    ;
+;     -- 4 input functions                    ; 199    ;
+;     -- 3 input functions                    ; 116    ;
 ;     -- <=2 input functions                  ; 34     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 298    ;
+;     -- normal mode                          ; 308    ;
 ;     -- arithmetic mode                      ; 41     ;
 ;                                             ;        ;
-; Total registers                             ; 196    ;
-;     -- Dedicated logic registers            ; 196    ;
+; Total registers                             ; 203    ;
+;     -- Dedicated logic registers            ; 203    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 67     ;
 ; Embedded Multiplier 9-bit elements          ; 1      ;
 ; Maximum fan-out node                        ; KEY[0] ;
-; Maximum fan-out                             ; 178    ;
-; Total fan-out                               ; 1754   ;
-; Average fan-out                             ; 2.90   ;
+; Maximum fan-out                             ; 176    ;
+; Total fan-out                               ; 1806   ;
+; Average fan-out                             ; 2.91   ;
 +---------------------------------------------+--------+
 
 
@@ -224,8 +225,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |processadorSimples                       ; 339 (1)           ; 196 (0)      ; 0           ; 1            ; 1       ; 0         ; 67   ; 0            ; |processadorSimples                                                                                                         ; work         ;
-;    |MUX:mux|                              ; 43 (43)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|MUX:mux                                                                                                 ; work         ;
+; |processadorSimples                       ; 349 (1)           ; 203 (0)      ; 0           ; 1            ; 1       ; 0         ; 67   ; 0            ; |processadorSimples                                                                                                         ; work         ;
+;    |MUX:mux|                              ; 51 (51)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|MUX:mux                                                                                                 ; work         ;
 ;    |ULA:ula|                              ; 149 (70)          ; 8 (8)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula                                                                                                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 79 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_divide:Div0                                                                                 ; work         ;
 ;          |lpm_divide_5dm:auto_generated|  ; 79 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_divide:Div0|lpm_divide_5dm:auto_generated                                                   ; work         ;
@@ -233,8 +234,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |alt_u_div_00f:divider|    ; 79 (79)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_divide:Div0|lpm_divide_5dm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_00f:divider ; work         ;
 ;       |lpm_mult:Mult0|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_mult:Mult0                                                                                  ; work         ;
 ;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_mult:Mult0|mult_o5t:auto_generated                                                          ; work         ;
-;    |UnidadeDeControle:UC|                 ; 2 (2)             ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|UnidadeDeControle:UC                                                                                    ; work         ;
-;    |ram:RAM|                              ; 144 (144)         ; 138 (138)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ram:RAM                                                                                                 ; work         ;
+;    |UnidadeDeControle:UC|                 ; 4 (4)             ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|UnidadeDeControle:UC                                                                                    ; work         ;
+;    |ram:RAM|                              ; 144 (144)         ; 136 (136)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ram:RAM                                                                                                 ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -262,12 +263,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 196   ;
+; Total registers                              ; 203   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 160   ;
+; Number of registers using Clock Enable       ; 168   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -286,7 +287,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; 14:1               ; 8 bits    ; 72 LEs        ; 56 LEs               ; 16 LEs                 ; Yes        ; |processadorSimples|ULA:ula|saidaULA[1]  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |processadorSimples|MUX:mux|out2         ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |processadorSimples|MUX:mux|out1         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |processadorSimples|MUX:mux|out0         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |processadorSimples|MUX:mux|out0         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
@@ -368,6 +369,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ram:RAM"                                                                                                 ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; led  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "MUX:mux"                                                                                                                          ;
 +-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
@@ -393,7 +403,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
-    Info: Processing started: Fri Nov 25 12:05:38 2016
+    Info: Processing started: Fri Nov 25 17:29:25 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorSimples -c processadorSimples
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file UnidadeDeControle.v
@@ -405,9 +415,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file ULA.v
 Warning (12090): Entity "MUX" obtained from "MUX.v" instead of from Quartus II megafunction library
 Info (12021): Found 1 design units, including 1 entities, in source file MUX.v
     Info (12023): Found entity 1: MUX
-Warning (12019): Can't analyze file -- file ../TOP_DE1.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file /home/fernandak/fernanda/TOP_DE1.v
+    Info (12023): Found entity 1: DE1_TOP
 Warning (12019): Can't analyze file -- file DE1_TOP.v is missing
-Warning (10236): Verilog HDL Implicit Net warning at processadorSimples.v(25): created implicit net for "ledOutput"
+Warning (10236): Verilog HDL Implicit Net warning at processadorSimples.v(28): created implicit net for "ledOutput"
 Info (12127): Elaborating entity "processadorSimples" for the top level hierarchy
 Warning (10034): Output port "LEDG[9..8]" at processadorSimples.v(8) has no driver
 Warning (10034): Output port "HEX0" at processadorSimples.v(7) has no driver
@@ -416,10 +427,12 @@ Warning (10034): Output port "HEX2" at processadorSimples.v(7) has no driver
 Warning (10034): Output port "HEX3" at processadorSimples.v(7) has no driver
 Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula"
 Info (12128): Elaborating entity "MUX" for hierarchy "MUX:mux"
+Warning (10034): Output port "led" at MUX.v(12) has no driver
 Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:UC"
 Warning (12125): Using design file ram.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: ram
 Info (12128): Elaborating entity "ram" for hierarchy "ram:RAM"
+Warning (10034): Output port "led" at ram.v(8) has no driver
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ULA:ula|Div0"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ULA:ula|Mult0"
@@ -452,10 +465,12 @@ Info (12133): Instantiated megafunction "ULA:ula|lpm_mult:Mult0" with the follow
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_o5t.tdf
     Info (12023): Found entity 1: mult_o5t
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[8]" is stuck at GND
     Warning (13410): Pin "LEDG[9]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
     Warning (13410): Pin "HEX0[0]" is stuck at GND
     Warning (13410): Pin "HEX0[1]" is stuck at GND
     Warning (13410): Pin "HEX0[2]" is stuck at GND
@@ -488,19 +503,19 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[5]" is stuck at GND
     Warning (13410): Pin "HEX3[6]" is stuck at GND
     Warning (13410): Pin "HEX3[7]" is stuck at GND
-Info (144001): Generated suppressed messages file /home/layhana/processadorSimples/output_files/processadorSimples.map.smsg
+Info (144001): Generated suppressed messages file /home/fernandak/fernanda/processadorSimples/output_files/processadorSimples.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK_50"
-Info (21057): Implemented 547 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 563 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 479 logic cells
+    Info (21061): Implemented 495 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 743 megabytes
-    Info: Processing ended: Fri Nov 25 12:05:39 2016
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 739 megabytes
+    Info: Processing ended: Fri Nov 25 17:29:26 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
@@ -508,6 +523,6 @@ Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 49 warnin
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/layhana/processadorSimples/output_files/processadorSimples.map.smsg.
+The suppressed messages can be found in /home/fernandak/fernanda/processadorSimples/output_files/processadorSimples.map.smsg.
 
 

@@ -7,12 +7,15 @@ module UnidadeDeControle(
 	input [7:0] dataOutMem,
 	input [7:0] regSaidaULA,
 	output reg [7:0]ledSaidaMem,
-	input clock
+	input clock,
+	output reg variacao,
+	output reg[7:0]barmemoria
 	);
 	
+
 always @(posedge clock)
 begin		
-		
+		variacao <= 1'b0;
 		rd <= 1'b0;
 		we <= 1'b0;
 
@@ -31,6 +34,13 @@ begin
 					rd <= 1'b1;
 					we <= 1'b0;
 					ledSaidaMem = dataOutMem;
+				end
+			4'b1110:
+			// Joga o conteudo da memoria ram no registrador A.
+				begin
+				variacao <= 1'b1;
+				rd <= 1'b1;
+				barmemoria = dataOutMem;
 				end
 		endcase
 	

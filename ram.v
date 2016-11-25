@@ -20,8 +20,8 @@ module ram(address, dataIn, dataOut, we, rd, clock, reset, led /*ledDataOut*/);
 	always @(posedge clock)
 	begin
 
-		led[0] <= we;
-		led[1] <= rd;
+		//led[0] <= we;
+		//led[1] <= rd;
 	
 		if (reset)
 		begin
@@ -33,21 +33,19 @@ module ram(address, dataIn, dataOut, we, rd, clock, reset, led /*ledDataOut*/);
 	
 		if (we)
 		begin
-			//ledDataOut = dataIn;
+			
 			mem[address] <= dataIn;
-			//dataOut <= 4'b0011;
+			
 		end
 		
 		if(rd)
 		begin
-			//if(address == 0)begin
-			//mem[address] <= 8'b11110011;
-			//end
+			
 			dataOut <= mem[address];
-			//dataOut <= 4'b0111;
+			
 		end
 	end
 
-	//assign ledDataOut = dataOut;
+	
 
 endmodule

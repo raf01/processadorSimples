@@ -39,6 +39,9 @@ always@(posedge clock)
 				//4'b1101:
 	
 					//ULA nao realiza nada. Unidade de Controle salva conteudo do endereco de memoria para o registrador A.
+				//4'1110:
+					// Joga o conteudo da memoria ram no registrador A.
+				//4'1111:
 					
 			endcase
 		end
