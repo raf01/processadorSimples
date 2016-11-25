@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("/home/layhana/Documents/processadorSimples/output_files/") File("processadorSimples.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C20F484) Path("/home/fernandak/fernanda/processadorSimples/output_files/") File("processadorSimples.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

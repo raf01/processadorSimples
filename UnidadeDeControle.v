@@ -8,26 +8,27 @@ module UnidadeDeControle(
 	input [7:0] regSaidaULA,
 	output reg [3:0] endMem,
 	input [7:0] regA,
-	//output reg [7:0]regSaidaMem,
+	output reg [7:0]regSaidaMem,
 	input enable,
 	input clock,
-	output [4:0]ledDataOut
+	//output [4:0]ledDataOut
+	//output [3:0]ledsDebugger
 	);
 
 
 	time count = 0;
-
-	output reg [3:0] dataOut;
+	//reg [3:0]debugger;
+	//output reg [3:0] dataOut;
 	
 always @(clock)
 begin
 	
-	debugger <= opcode;
+	//debugger <= opcode;
 	
 	count = count + 1;
 	
-	if(count == 10000000)
-	begin
+	//if(count == 10000000)
+	//begin
 	
 		
 		
@@ -40,27 +41,30 @@ begin
 			4'b1100:
 				begin
 					//ULA nao realiza nada. Unidade de Controle captura registrador de saida da ULA e salva na memoria RAM.
-					dataInMem = regSaidaULA;
 					rd = 1'b0;
 					we = 1'b1;
-					debugger <= 4'b1100;
+					
+					dataInMem = regSaidaULA;
+					
+					//debugger <= 4'b1100;
 				end
 			4'b1101:
 				// Unidade de Controle salva conteudo do endereco de memoria para o registrador A.
 				begin
-					endMem = operando;
 					rd = 1'b1;
 					we = 1'b0;
-					//regSaidaMem = dataOutMem;
+					//endMem = operando;
+			
+					regSaidaMem = dataOutMem;
 					
 				end
 		endcase
-	end
+	//end
 end 
 
 //assign opcode[3:0] = instructionByte[7:4];
 //assign operando[3:0] = instructionByte[3:0];
 
-assign ledsDebugger[4:1] = debugger;
+//assign ledsDebugger[3:0] = debugger;
 
 endmodule

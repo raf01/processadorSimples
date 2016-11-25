@@ -25,10 +25,10 @@ MUX mux(.in(SW[7:0]), .seletor(SW[9:8]), .out0(registradorA), .out1(registradorB
 .out3(saidaULA), .clock(~KEY[0]), .enable(~KEY[2]), .ledOutput(ledOutput), .choiceOut(LEDG[7:0]));
 
 UnidadeDeControle UC(.opcode(opcode), .operando(operando), .rd(rd),.we(we), .dataInMem(datainMem),
-.dataOutMem(dataOutMem), .regSaidaULA(saidaULA), .endMem(endMem), .regA(registradorA), // .regSaidaMem(LEDR[7:0]),
-.clock(CLOCK_50), .enable(~KEY[3]));
+.dataOutMem(dataOutMem), .regSaidaULA(saidaULA), .endMem(endMem), .regA(registradorA), .regSaidaMem(LEDR[7:0]),
+.clock(~KEY[3])); //.enable(~KEY[3])); //.ledsDebugger(LEDG[4:7]));//ledDataOut
 
-ram RAM(.address(endMem), .dataIn(datainMem), .dataOut(dataOutMem), .we(we), .rd(rd), .clock(CLOCK_50), .ledDataOut(LEDR[3:0]));
+ram RAM(.address(endMem), .dataIn(datainMem), .dataOut(dataOutMem), .we(we), .rd(rd), .clock(~KEY[3]) /*.ledDataOut(LEDR[7:0])*/);
 
 endmodule
 

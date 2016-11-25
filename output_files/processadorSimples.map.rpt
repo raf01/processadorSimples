@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processadorSimples
-Tue Nov 22 18:04:23 2016
+Fri Nov 25 10:25:08 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -10,8 +10,21 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web E
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for Inferred Entity Instance: ULA:ula|lpm_divide:Div0
+ 13. Parameter Settings for Inferred Entity Instance: ULA:ula|lpm_mult:Mult0
+ 14. lpm_mult Parameter Settings by Entity Instance
+ 15. Port Connectivity Checks: "ram:RAM"
+ 16. Port Connectivity Checks: "UnidadeDeControle:UC"
+ 17. Port Connectivity Checks: "MUX:mux"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +50,20 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Nov 22 18:04:23 2016                  ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 25 10:25:08 2016              ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; processadorSimples                                 ;
 ; Top-level Entity Name              ; processadorSimples                                 ;
 ; Family                             ; Cyclone II                                         ;
-; Total logic elements               ; N/A until Partition Merge                          ;
-;     Total combinational functions  ; N/A until Partition Merge                          ;
-;     Dedicated logic registers      ; N/A until Partition Merge                          ;
-; Total registers                    ; N/A until Partition Merge                          ;
-; Total pins                         ; N/A until Partition Merge                          ;
-; Total virtual pins                 ; N/A until Partition Merge                          ;
-; Total memory bits                  ; N/A until Partition Merge                          ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                          ;
-; Total PLLs                         ; N/A until Partition Merge                          ;
+; Total logic elements               ; 236                                                ;
+;     Total combinational functions  ; 236                                                ;
+;     Dedicated logic registers      ; 40                                                 ;
+; Total registers                    ; 40                                                 ;
+; Total pins                         ; 65                                                 ;
+; Total virtual pins                 ; 0                                                  ;
+; Total memory bits                  ; 0                                                  ;
+; Embedded Multiplier 9-bit elements ; 1                                                  ;
+; Total PLLs                         ; 0                                                  ;
 +------------------------------------+----------------------------------------------------+
 
 
@@ -150,13 +163,296 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; UnidadeDeControle.v              ; yes             ; User Verilog HDL File        ; /home/fernandak/fernanda/processadorSimples/UnidadeDeControle.v        ;         ;
+; processadorSimples.v             ; yes             ; User Verilog HDL File        ; /home/fernandak/fernanda/processadorSimples/processadorSimples.v       ;         ;
+; ULA.v                            ; yes             ; User Verilog HDL File        ; /home/fernandak/fernanda/processadorSimples/ULA.v                      ;         ;
+; MUX.v                            ; yes             ; User Verilog HDL File        ; /home/fernandak/fernanda/processadorSimples/MUX.v                      ;         ;
+; ram.v                            ; yes             ; Auto-Found Verilog HDL File  ; /home/fernandak/fernanda/processadorSimples/ram.v                      ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/aglobal130.inc      ;         ;
+; db/lpm_divide_5dm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/lpm_divide_5dm.tdf      ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/sign_div_unsign_fkh.tdf ;         ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/alt_u_div_00f.tdf       ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/add_sub_lkc.tdf         ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/add_sub_mkc.tdf         ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/multcore.inc        ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /opt/altera13.0sp1/quartus/libraries/megafunctions/altshift.inc        ;         ;
+; db/mult_o5t.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/fernandak/fernanda/processadorSimples/db/mult_o5t.tdf            ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 236             ;
+;                                             ;                 ;
+; Total combinational functions               ; 236             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 101             ;
+;     -- 3 input functions                    ; 105             ;
+;     -- <=2 input functions                  ; 30              ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 195             ;
+;     -- arithmetic mode                      ; 41              ;
+;                                             ;                 ;
+; Total registers                             ; 40              ;
+;     -- Dedicated logic registers            ; 40              ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 65              ;
+; Embedded Multiplier 9-bit elements          ; 1               ;
+; Maximum fan-out node                        ; MUX:mux|out2[4] ;
+; Maximum fan-out                             ; 45              ;
+; Total fan-out                               ; 887             ;
+; Average fan-out                             ; 2.59            ;
++---------------------------------------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; |processadorSimples                       ; 236 (1)           ; 40 (0)       ; 0           ; 1            ; 1       ; 0         ; 65   ; 0            ; |processadorSimples                                                                                                         ; work         ;
+;    |MUX:mux|                              ; 43 (43)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|MUX:mux                                                                                                 ; work         ;
+;    |ULA:ula|                              ; 149 (70)          ; 8 (8)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 79 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_5dm:auto_generated|  ; 79 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_divide:Div0|lpm_divide_5dm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 79 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_divide:Div0|lpm_divide_5dm:auto_generated|sign_div_unsign_fkh:divider                       ; work         ;
+;                |alt_u_div_00f:divider|    ; 79 (79)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_divide:Div0|lpm_divide_5dm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_00f:divider ; work         ;
+;       |lpm_mult:Mult0|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_mult:Mult0                                                                                  ; work         ;
+;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processadorSimples|ULA:ula|lpm_mult:Mult0|mult_o5t:auto_generated                                                          ; work         ;
+;    |UnidadeDeControle:UC|                 ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|UnidadeDeControle:UC                                                                                    ; work         ;
+;    |ram:RAM|                              ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processadorSimples|ram:RAM                                                                                                 ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 1           ;
+; Simple Multipliers (18-bit)           ; 0           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 1           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal         ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; UnidadeDeControle:UC|regSaidaMem[0]                 ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; UnidadeDeControle:UC|regSaidaMem[1]                 ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; UnidadeDeControle:UC|regSaidaMem[2]                 ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; UnidadeDeControle:UC|regSaidaMem[3]                 ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; UnidadeDeControle:UC|regSaidaMem[4]                 ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; UnidadeDeControle:UC|regSaidaMem[5]                 ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; UnidadeDeControle:UC|regSaidaMem[6]                 ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; UnidadeDeControle:UC|regSaidaMem[7]                 ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; ram:RAM|dataOut[0]                                  ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; ram:RAM|dataOut[1]                                  ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; ram:RAM|dataOut[2]                                  ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; ram:RAM|dataOut[3]                                  ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; ram:RAM|dataOut[4]                                  ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; ram:RAM|dataOut[5]                                  ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; ram:RAM|dataOut[6]                                  ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; ram:RAM|dataOut[7]                                  ; UnidadeDeControle:UC|Equal1 ; yes                    ;
+; ram:RAM|mem~0                                       ; ram:RAM|mem.we_a            ; yes                    ;
+; ram:RAM|mem~1                                       ; ram:RAM|mem.we_a            ; yes                    ;
+; ram:RAM|mem~2                                       ; ram:RAM|mem.we_a            ; yes                    ;
+; ram:RAM|mem~3                                       ; ram:RAM|mem.we_a            ; yes                    ;
+; ram:RAM|mem~4                                       ; ram:RAM|mem.we_a            ; yes                    ;
+; ram:RAM|mem~5                                       ; ram:RAM|mem.we_a            ; yes                    ;
+; ram:RAM|mem~6                                       ; ram:RAM|mem.we_a            ; yes                    ;
+; ram:RAM|mem~7                                       ; ram:RAM|mem.we_a            ; yes                    ;
+; UnidadeDeControle:UC|dataInMem[0]                   ; UnidadeDeControle:UC|Equal0 ; yes                    ;
+; UnidadeDeControle:UC|dataInMem[1]                   ; UnidadeDeControle:UC|Equal0 ; yes                    ;
+; UnidadeDeControle:UC|dataInMem[2]                   ; UnidadeDeControle:UC|Equal0 ; yes                    ;
+; UnidadeDeControle:UC|dataInMem[3]                   ; UnidadeDeControle:UC|Equal0 ; yes                    ;
+; UnidadeDeControle:UC|dataInMem[4]                   ; UnidadeDeControle:UC|Equal0 ; yes                    ;
+; UnidadeDeControle:UC|dataInMem[5]                   ; UnidadeDeControle:UC|Equal0 ; yes                    ;
+; UnidadeDeControle:UC|dataInMem[6]                   ; UnidadeDeControle:UC|Equal0 ; yes                    ;
+; UnidadeDeControle:UC|dataInMem[7]                   ; UnidadeDeControle:UC|Equal0 ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                             ;                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 40    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processadorSimples|MUX:mux|choiceOut[0] ;
+; 14:1               ; 8 bits    ; 72 LEs        ; 56 LEs               ; 16 LEs                 ; Yes        ; |processadorSimples|ULA:ula|saidaULA[4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |processadorSimples|MUX:mux|out2         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |processadorSimples|MUX:mux|out1         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |processadorSimples|MUX:mux|out0         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ULA:ula|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------+
+; Parameter Name         ; Value          ; Type                           ;
++------------------------+----------------+--------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                        ;
+; LPM_WIDTHD             ; 8              ; Untyped                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                        ;
+; CBXI_PARAMETER         ; lpm_divide_5dm ; Untyped                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                 ;
++------------------------+----------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ULA:ula|lpm_mult:Mult0           ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 8          ; Untyped             ;
+; LPM_WIDTHB                                     ; 8          ; Untyped             ;
+; LPM_WIDTHP                                     ; 16         ; Untyped             ;
+; LPM_WIDTHR                                     ; 16         ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Untyped             ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_o5t   ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                 ;
++---------------------------------------+------------------------+
+; Name                                  ; Value                  ;
++---------------------------------------+------------------------+
+; Number of entity instances            ; 1                      ;
+; Entity Instance                       ; ULA:ula|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 8                      ;
+;     -- LPM_WIDTHB                     ; 8                      ;
+;     -- LPM_WIDTHP                     ; 16                     ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED               ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                     ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                     ;
+;     -- USE_EAB                        ; OFF                    ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                   ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                     ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                     ;
++---------------------------------------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ram:RAM"                                                                                                                                          ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                         ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "address[3..1]" will be connected to GND. ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UnidadeDeControle:UC"                                                                                                                              ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                      ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; endMem     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "endMem[3..1]" have no fanouts                    ;
+; enable     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; ledDataOut ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX:mux"                                                                                                                          ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                      ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; ledOutput ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "ledOutput[7..1]" have no fanouts ;
+; ledOutput ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                          ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
-    Info: Processing started: Tue Nov 22 18:04:23 2016
+    Info: Processing started: Fri Nov 25 10:25:06 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processadorSimples -c processadorSimples
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file UnidadeDeControle.v
@@ -168,26 +464,161 @@ Info (12021): Found 1 design units, including 1 entities, in source file ULA.v
 Warning (12090): Entity "MUX" obtained from "MUX.v" instead of from Quartus II megafunction library
 Info (12021): Found 1 design units, including 1 entities, in source file MUX.v
     Info (12023): Found entity 1: MUX
-Info (12021): Found 1 design units, including 1 entities, in source file TOP_DE1.v
+Info (12021): Found 1 design units, including 1 entities, in source file /home/fernandak/fernanda/TOP_DE1.v
     Info (12023): Found entity 1: DE1_TOP
 Warning (12019): Can't analyze file -- file DE1_TOP.v is missing
 Warning (10236): Verilog HDL Implicit Net warning at processadorSimples.v(25): created implicit net for "ledOutput"
-Error (10206): Verilog HDL Module Declaration error at UnidadeDeControle.v(20): top module port "dataOut" is not found in the port list File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 20
-Error (10161): Verilog HDL error at UnidadeDeControle.v(25): object "debugger" is not declared File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 25
-Error (10161): Verilog HDL error at UnidadeDeControle.v(46): object "debugger" is not declared File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 46
-Error (10161): Verilog HDL error at UnidadeDeControle.v(64): object "ledsDebugger" is not declared File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 64
-Error (10161): Verilog HDL error at UnidadeDeControle.v(64): object "debugger" is not declared File: /home/layhana/Documents/processadorSimples/UnidadeDeControle.v Line: 64
-Info (144001): Generated suppressed messages file /home/layhana/Documents/processadorSimples/output_files/processadorSimples.map.smsg
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 5 errors, 4 warnings
-    Error: Peak virtual memory: 652 megabytes
-    Error: Processing ended: Tue Nov 22 18:04:23 2016
-    Error: Elapsed time: 00:00:00
-    Error: Total CPU time (on all processors): 00:00:00
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in /home/layhana/Documents/processadorSimples/output_files/processadorSimples.map.smsg.
+Info (12127): Elaborating entity "processadorSimples" for the top level hierarchy
+Warning (10034): Output port "LEDG[9..8]" at processadorSimples.v(8) has no driver
+Warning (10034): Output port "HEX0" at processadorSimples.v(7) has no driver
+Warning (10034): Output port "HEX1" at processadorSimples.v(7) has no driver
+Warning (10034): Output port "HEX2" at processadorSimples.v(7) has no driver
+Warning (10034): Output port "HEX3" at processadorSimples.v(7) has no driver
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula"
+Info (12128): Elaborating entity "MUX" for hierarchy "MUX:mux"
+Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:UC"
+Warning (10235): Verilog HDL Always Construct warning at UnidadeDeControle.v(28): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at UnidadeDeControle.v(40): variable "opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at UnidadeDeControle.v(47): variable "regSaidaULA" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at UnidadeDeControle.v(58): variable "dataOutMem" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at UnidadeDeControle.v(40): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(23): inferring latch(es) for variable "dataInMem", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at UnidadeDeControle.v(23): inferring latch(es) for variable "regSaidaMem", which holds its previous value in one or more paths through the always construct
+Warning (10034): Output port "endMem" at UnidadeDeControle.v(9) has no driver
+Warning (10034): Output port "ledDataOut" at UnidadeDeControle.v(16) has no driver
+Info (10041): Inferred latch for "regSaidaMem[0]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "regSaidaMem[1]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "regSaidaMem[2]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "regSaidaMem[3]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "regSaidaMem[4]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "regSaidaMem[5]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "regSaidaMem[6]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "regSaidaMem[7]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "dataInMem[0]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "dataInMem[1]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "dataInMem[2]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "dataInMem[3]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "dataInMem[4]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "dataInMem[5]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "dataInMem[6]" at UnidadeDeControle.v(23)
+Info (10041): Inferred latch for "dataInMem[7]" at UnidadeDeControle.v(23)
+Warning (12125): Using design file ram.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ram
+Info (12128): Elaborating entity "ram" for hierarchy "ram:RAM"
+Warning (10235): Verilog HDL Always Construct warning at ram.v(29): variable "we" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ram.v(32): variable "dataIn" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ram.v(32): variable "address" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ram.v(37): variable "rd" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ram.v(39): variable "address" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ram.v(40): variable "address" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ram.v(42): variable "address" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at ram.v(24): inferring latch(es) for variable "dataOut", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "dataOut[0]" at ram.v(24)
+Info (10041): Inferred latch for "dataOut[1]" at ram.v(24)
+Info (10041): Inferred latch for "dataOut[2]" at ram.v(24)
+Info (10041): Inferred latch for "dataOut[3]" at ram.v(24)
+Info (10041): Inferred latch for "dataOut[4]" at ram.v(24)
+Info (10041): Inferred latch for "dataOut[5]" at ram.v(24)
+Info (10041): Inferred latch for "dataOut[6]" at ram.v(24)
+Info (10041): Inferred latch for "dataOut[7]" at ram.v(24)
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ULA:ula|Div0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ULA:ula|Mult0"
+Info (12130): Elaborated megafunction instantiation "ULA:ula|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "ULA:ula|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_5dm.tdf
+    Info (12023): Found entity 1: lpm_divide_5dm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_fkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_00f.tdf
+    Info (12023): Found entity 1: alt_u_div_00f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info (12023): Found entity 1: add_sub_lkc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info (12023): Found entity 1: add_sub_mkc
+Info (12130): Elaborated megafunction instantiation "ULA:ula|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "ULA:ula|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "16"
+    Info (12134): Parameter "LPM_WIDTHR" = "16"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_o5t.tdf
+    Info (12023): Found entity 1: mult_o5t
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch ram:RAM|mem~0 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MUX:mux|out2[4]
+Warning (13012): Latch ram:RAM|mem~1 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MUX:mux|out2[4]
+Warning (13012): Latch ram:RAM|mem~2 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MUX:mux|out2[4]
+Warning (13012): Latch ram:RAM|mem~3 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MUX:mux|out2[4]
+Warning (13012): Latch ram:RAM|mem~4 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MUX:mux|out2[4]
+Warning (13012): Latch ram:RAM|mem~5 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MUX:mux|out2[4]
+Warning (13012): Latch ram:RAM|mem~6 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MUX:mux|out2[4]
+Warning (13012): Latch ram:RAM|mem~7 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MUX:mux|out2[4]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[8]" is stuck at GND
+    Warning (13410): Pin "LEDG[9]" is stuck at GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[6]" is stuck at GND
+    Warning (13410): Pin "HEX0[7]" is stuck at GND
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at GND
+    Warning (13410): Pin "HEX1[7]" is stuck at GND
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at GND
+    Warning (13410): Pin "HEX2[7]" is stuck at GND
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[3]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at GND
+    Warning (13410): Pin "HEX3[7]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+Info (21057): Implemented 326 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 50 output pins
+    Info (21061): Implemented 260 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 82 warnings
+    Info: Peak virtual memory: 741 megabytes
+    Info: Processing ended: Fri Nov 25 10:25:08 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
