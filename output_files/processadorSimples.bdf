@@ -1,0 +1,331 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(symbol
+	(rect 464 336 712 512)
+	(text "MUX" (rect 5 0 53 21)(font "Arial" ))
+	(text "inst" (rect 8 160 42 181)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "in[7..0]" (rect 0 0 66 21)(font "Arial" ))
+		(text "in[7..0]" (rect 21 27 87 48)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "seletor[1..0]" (rect 0 0 118 21)(font "Arial" ))
+		(text "seletor[1..0]" (rect 21 43 139 64)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "out3[7..0]" (rect 0 0 93 21)(font "Arial" ))
+		(text "out3[7..0]" (rect 21 59 114 80)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "clock" (rect 0 0 51 21)(font "Arial" ))
+		(text "clock" (rect 21 75 72 96)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "enable" (rect 0 0 67 21)(font "Arial" ))
+		(text "enable" (rect 21 91 88 112)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "variacao2" (rect 0 0 95 21)(font "Arial" ))
+		(text "variacao2" (rect 21 107 116 128)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "barramentoMem[7..0]" (rect 0 0 212 21)(font "Arial" ))
+		(text "barramentoMem[7..0]" (rect 21 123 233 144)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "out0[7..0]" (rect 0 0 93 21)(font "Arial" ))
+		(text "out0[7..0]" (rect 149 27 242 48)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "out1[7..0]" (rect 0 0 93 21)(font "Arial" ))
+		(text "out1[7..0]" (rect 149 43 242 64)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 3))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "out2[7..0]" (rect 0 0 93 21)(font "Arial" ))
+		(text "out2[7..0]" (rect 149 59 242 80)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 3))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "ledOutput[7..0]" (rect 0 0 146 21)(font "Arial" ))
+		(text "ledOutput[7..0]" (rect 104 75 250 96)(font "Arial" ))
+		(line (pt 248 80)(pt 232 80)(line_width 3))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "choiceOut[7..0]" (rect 0 0 151 21)(font "Arial" ))
+		(text "choiceOut[7..0]" (rect 100 91 251 112)(font "Arial" ))
+		(line (pt 248 96)(pt 232 96)(line_width 3))
+	)
+	(port
+		(pt 248 112)
+		(output)
+		(text "led[1..0]" (rect 0 0 80 21)(font "Arial" ))
+		(text "led[1..0]" (rect 160 107 240 128)(font "Arial" ))
+		(line (pt 248 112)(pt 232 112)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 160))
+	)
+)
+(symbol
+	(rect 1376 584 1592 728)
+	(text "ULA" (rect 5 0 49 21)(font "Arial" ))
+	(text "inst2" (rect 8 128 55 149)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "regA[7..0]" (rect 0 0 97 21)(font "Arial" ))
+		(text "regA[7..0]" (rect 21 27 118 48)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "regB[7..0]" (rect 0 0 97 21)(font "Arial" ))
+		(text "regB[7..0]" (rect 21 43 118 64)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "opcode[3..0]" (rect 0 0 126 21)(font "Arial" ))
+		(text "opcode[3..0]" (rect 21 59 147 80)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "operando[3..0]" (rect 0 0 145 21)(font "Arial" ))
+		(text "operando[3..0]" (rect 21 75 166 96)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "clock" (rect 0 0 51 21)(font "Arial" ))
+		(text "clock" (rect 21 91 72 112)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "enableULA" (rect 0 0 112 21)(font "Arial" ))
+		(text "enableULA" (rect 21 107 133 128)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "saidaULA[7..0]" (rect 0 0 146 21)(font "Arial" ))
+		(text "saidaULA[7..0]" (rect 72 27 218 48)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 200 128))
+	)
+)
+(symbol
+	(rect 992 48 1384 312)
+	(text "UnidadeDeControle" (rect 5 0 202 21)(font "Arial" ))
+	(text "inst5" (rect 8 160 55 181)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "opcode[3..0]" (rect 0 0 126 21)(font "Arial" ))
+		(text "opcode[3..0]" (rect 21 27 147 48)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "operando[3..0]" (rect 0 0 145 21)(font "Arial" ))
+		(text "operando[3..0]" (rect 21 43 166 64)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "dataOutMem[7..0]" (rect 0 0 177 21)(font "Arial" ))
+		(text "dataOutMem[7..0]" (rect 21 59 198 80)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "regSaidaULA[7..0]" (rect 0 0 182 21)(font "Arial" ))
+		(text "regSaidaULA[7..0]" (rect 21 75 203 96)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "clock" (rect 0 0 51 21)(font "Arial" ))
+		(text "clock" (rect 21 91 72 112)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 392 32)
+		(output)
+		(text "rd" (rect 144 0 164 21)(font "Arial" ))
+		(text "rd" (rect 355 27 375 48)(font "Arial" ))
+		(line (pt 392 32)(pt 376 32))
+	)
+	(port
+		(pt 392 48)
+		(output)
+		(text "we" (rect 144 0 172 21)(font "Arial" ))
+		(text "we" (rect 348 43 376 64)(font "Arial" ))
+		(line (pt 392 48)(pt 376 48))
+	)
+	(port
+		(pt 392 64)
+		(output)
+		(text "enableULA" (rect 144 0 256 21)(font "Arial" ))
+		(text "enableULA" (rect 277 59 389 80)(font "Arial" ))
+		(line (pt 392 64)(pt 376 64))
+	)
+	(port
+		(pt 392 80)
+		(output)
+		(text "dataInMem[7..0]" (rect 144 0 304 21)(font "Arial" ))
+		(text "dataInMem[7..0]" (rect 236 75 396 96)(font "Arial" ))
+		(line (pt 392 80)(pt 376 80)(line_width 3))
+	)
+	(port
+		(pt 392 96)
+		(output)
+		(text "ledSaidaMem[7..0]" (rect 144 0 330 21)(font "Arial" ))
+		(text "ledSaidaMem[7..0]" (rect 214 91 400 112)(font "Arial" ))
+		(line (pt 392 96)(pt 376 96)(line_width 3))
+	)
+	(port
+		(pt 392 112)
+		(output)
+		(text "variacao" (rect 144 0 226 21)(font "Arial" ))
+		(text "variacao" (rect 302 107 384 128)(font "Arial" ))
+		(line (pt 392 112)(pt 376 112))
+	)
+	(port
+		(pt 392 128)
+		(output)
+		(text "barmemoria[7..0]" (rect 144 0 312 21)(font "Arial" ))
+		(text "barmemoria[7..0]" (rect 229 123 397 144)(font "Arial" ))
+		(line (pt 392 128)(pt 376 128)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 24 24 376 248))
+	)
+)
+(connector
+	(pt 712 400)
+	(pt 848 400)
+	(bus)
+)
+(connector
+	(pt 848 400)
+	(pt 848 80)
+	(bus)
+)
+(connector
+	(pt 992 96)
+	(pt 936 96)
+	(bus)
+)
+(connector
+	(pt 936 96)
+	(pt 936 80)
+	(bus)
+)
+(connector
+	(pt 848 80)
+	(pt 936 80)
+	(bus)
+)
+(connector
+	(pt 936 80)
+	(pt 992 80)
+	(bus)
+)
+(connector
+	(pt 1104 568)
+	(pt 1160 568)
+	(bus)
+)
+(connector
+	(pt 1160 360)
+	(pt 1160 568)
+	(bus)
+)
+(connector
+	(pt 920 360)
+	(pt 1160 360)
+	(bus)
+)
+(connector
+	(pt 920 360)
+	(pt 920 112)
+	(bus)
+)
+(connector
+	(pt 920 112)
+	(pt 992 112)
+	(bus)
+)
+(connector
+	(pt 992 112)
+	(pt 1000 112)
+	(bus)
+)
+(junction (pt 936 80))
+(junction (pt 992 112))

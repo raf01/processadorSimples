@@ -1,13 +1,13 @@
-module ULA (regA, regB, opcode, operando, clock, saidaULA,enable);
+module ULA (regA, regB, opcode, operando, clock, saidaULA,enableULA);
 
-input enable, clock;
+input enableULA, clock;
 input [7:0] regA, regB;
 input [3:0]opcode, operando;
 output reg [7:0] saidaULA;
 
 always@(posedge clock)
 	begin
-		if (enable)
+		if (enableULA)
 		begin
 			case (opcode)
 				4'b0000:

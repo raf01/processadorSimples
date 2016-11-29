@@ -1,27 +1,15 @@
-module ram(address, dataIn, dataOut, we, rd, clock, reset, led /*ledDataOut*/);
+module ram(address, dataIn, dataOut, we, rd, clock, reset);
 	input reset;
    input [7:0] dataIn;
    input [3:0] address;
    input we, rd, clock;
 	reg[7:0] mem[15:0];
 	output reg [7:0] dataOut;
-	output reg [1:0]led;
-	//output reg[7:0] ledDataOut;
-	/*initial
-	begin
-		mem[0000] = 8'b10101010;
-		mem[0001] = 8'b00001111;
-		mem[0010] = 8'b00000001;
-		mem[0011] = 8'b00000010;
-	end*/
 	
-	//olhar se ta entrando no datain
+
 	
 	always @(posedge clock)
 	begin
-
-		//led[0] <= we;
-		//led[1] <= rd;
 	
 		if (reset)
 		begin
